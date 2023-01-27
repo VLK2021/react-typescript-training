@@ -4,12 +4,12 @@ import {IProduct} from "../../interfaces/IProduct";
 
 
 
-interface productProps {
+interface productInterface {
     products:IProduct[]
 }
 
 
-const Products = ({products}: productProps) => {
+const Products = ({products}: productInterface) => {
 
     return (
         <div>
