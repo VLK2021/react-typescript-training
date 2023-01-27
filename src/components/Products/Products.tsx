@@ -15,9 +15,10 @@ const Products = () => {
 
 
     return (
-        <div>
+        <div className={'products'}>
             {
-                products && products.map(product => <Product product={product}/>)
+    // @ts-ignore
+                products && products.map(product => <Product key={product.id} product={product}/>)
             }
         </div>
     );

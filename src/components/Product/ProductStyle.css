@@ -1,8 +1,51 @@
 .container{
-    width: 50%;
-    background: beige;
-    padding: 0.2rem;
+    width: 25%;
+    background: snow;
+    padding: 0.5rem;
+    border: 0.2rem solid beige;
+}
+
+.container-img{
+    width: 95%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: snow;
+}
+
+h5{
+    width: 100%;
     text-align: center;
-    border: 0.2rem solid darkblue;
-    margin-bottom: 0.3rem;
+}
+
+img{
+    width: 30%;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+button{
+    width: 25%;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: darkblue;
+    color: beige;
+}
+
+button:hover{
+    background: beige;
+    color: darkblue;
+    border: 1px solid darkblue;
+}
+
+.product-info{
+    text-align: start;
+    padding: 0.1rem;
 }
