@@ -1,20 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {IProduct} from "../../interfaces/IProduct";
-
-
-
-interface productInterface {
-    products:IProduct[]
-}
+import Product from "../Product/Product";
 
 
-const Products = ({products}: productInterface) => {
+const Products = () => {
+    const [products, setProducts]= useState([]);
+
+
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(value=>setProducts(value))
+    }, []);
+
 
     return (
         <div>
             {
-                products && products.map(prod => <div key={prod.id}>{prod.title}</div>)
+                products && products.map(product => <Product product={product}/>)
             }
         </div>
     );

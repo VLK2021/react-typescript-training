@@ -1,0 +1,8 @@
+.container{
+    width: 50%;
+    background: beige;
+    padding: 0.2rem;
+    text-align: center;
+    border: 0.2rem solid darkblue;
+    margin-bottom: 0.3rem;
+}
