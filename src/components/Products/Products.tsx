@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
+import './ProductsStyle.css';
 import Product from "../Product/Product";
+import {productService} from "../../services/product.service";
+import {IProduct} from "../../interfaces/IProduct";
 
 
 const Products = () => {
@@ -8,17 +11,14 @@ const Products = () => {
 
 
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(value=>setProducts(value))
+        productService.getAll().then(value => setProducts(value.data))
     }, []);
 
 
     return (
         <div className={'products'}>
             {
-    // @ts-ignore
-                products && products.map(product => <Product key={product.id} product={product}/>)
+                products && products.map((product:IProduct)  => <Product key={product.id} product={product}/>)
             }
         </div>
     );
