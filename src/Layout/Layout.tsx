@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Products from "../components/Products/Products";
 import Navigation from "../components/Navigation/Navigation";
+import { Outlet } from 'react-router-dom';
 
 
 const Layout = () => {
     return (
         <div className={'layout'}>
             <Navigation/>
-            <Products/>
+            <Outlet/>
         </div>
     );
 };

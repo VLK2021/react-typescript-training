@@ -14,8 +14,11 @@ const Navigation = () => {
 
     return (
         <div className={'nav'}>
+            <Link to={'/'}>Home</Link>
+
             {
-                categories && categories.map(cat => <Link to={`${cat}`}>{cat}</Link>)
+                categories &&
+                categories.map((cat:string) => <Link to={`${cat.replace(' ', '').replace('\'', '')}`}>{cat}</Link>)
             }
         </div>
     );
